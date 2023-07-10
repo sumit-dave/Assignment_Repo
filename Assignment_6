@@ -16,20 +16,42 @@ Ans.  * Variable should not start with integers.
 
 Q.3. What are the standards and conventions followed for the nomenclature of variables in
 python to improve code readability and maintainability?
+Ans.  
+
 Q.4. What will happen if a keyword is used as a variable name?
+Ans. It will show SyntaxError.
+
 Q.5. For what purpose def keyword is used?
+Ans. def keyword is used to create funtions.
+
 Q.6. What is the operation of this special character ‘\’?
+Ans. we use this special character with n to enter data in next line. like: \n
+
 Q.7. Give an example of the following conditions:
 (i) Homogeneous list
 (ii) Heterogeneous set
 (iii) Homogeneous tuple
-Q.8. Explain the mutable and immutable data types with proper explanation & examples.
+Q.8. Explain the mutable and immutable data types with proper explanation & examples.:
+Ans.  * Mutable: Mutable are the data sets which can be modify or update after exicution also. like: List, string, dictionaries.
+            Example: l=[1,2,3]
+                     l.append('sumit')
+                     print(l)    ## output: [1,2,3,'sumit']
+      * Immutable: Immutable are the data sets which can be modify or update after exicution. like: tuple
+            Example: t=(1,2,3)
+                     t.append('sumit')
+                     ## Error Output: 'tuple' object has no attribute 'append'
 Q.9. Write a code to create the given structure using only for loop.
 *
 ***
 *****
 *******
 *********
+Ans. 
+      code: for i in range(1,10):
+                  for j in range(1,15,2):
+                      print('*'*j, end='')
+                      print('\n')
+                    break 
 Q.10. Write a code to create the given structure using while loop.
 |||||||||||
  |||||||||
