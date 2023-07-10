@@ -1,0 +1,39 @@
+Python Basic - 1
+
+Q.1. What are keywords in python? Using the keyword library, print all the python keywords.
+Ans.  import keyword
+      print(keyword.kwlist)
+
+Ouput: ['False', 'None', 'True', '__peg_parser__', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 
+        'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 
+        'not', 'or','pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+Q.2. What are the rules to create variables in python?
+Ans.  * Variable should not start with integers.
+      * Variable should not have space if need 2 words, we can use variable like:  Car_model= X6
+      * We can't use airthometic operators in variables.  
+      * Variable names are case-sensitive (age, Age and AGE are three different variables)
+
+Q.3. What are the standards and conventions followed for the nomenclature of variables in
+python to improve code readability and maintainability?
+Q.4. What will happen if a keyword is used as a variable name?
+Q.5. For what purpose def keyword is used?
+Q.6. What is the operation of this special character ‘\’?
+Q.7. Give an example of the following conditions:
+(i) Homogeneous list
+(ii) Heterogeneous set
+(iii) Homogeneous tuple
+Q.8. Explain the mutable and immutable data types with proper explanation & examples.
+Q.9. Write a code to create the given structure using only for loop.
+*
+***
+*****
+*******
+*********
+Q.10. Write a code to create the given structure using while loop.
+|||||||||||
+ |||||||||
+  |||||||
+   |||||
+    |||
+     |
