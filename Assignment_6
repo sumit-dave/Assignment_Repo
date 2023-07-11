@@ -16,7 +16,9 @@ Ans.  * Variable should not start with integers.
 
 Q.3. What are the standards and conventions followed for the nomenclature of variables in
 python to improve code readability and maintainability?
-Ans.  
+
+Ans. There are some standards and conventions followed for variable naming to improve code readability and maintainability.
+            Ex: car_model, list_sum, total_count etc.
 
 Q.4. What will happen if a keyword is used as a variable name?
 Ans. It will show SyntaxError.
@@ -75,15 +77,15 @@ Q.10. Write a code to create the given structure using while loop.
      |
 
 Ans.
-      row = 6  # Number of rows in the structure
-      num_pipes = 10  # Number of pipes in the first row
+      row = 6  # No of rows patten
+      num_pipes = 11  # No of pipes in the first row
 
       while row > 0:
-          # Print the required number of spaces before the pipes
+          # Required number of spaces before the pipes
           spaces = 6 - row
           print(" " * spaces, end="")
       
-          # Print the pipes
+          # No of pipes
           pipes = "|" * num_pipes
           print(pipes)
       
