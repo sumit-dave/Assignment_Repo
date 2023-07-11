@@ -25,12 +25,26 @@ Q.5. For what purpose def keyword is used?
 Ans. def keyword is used to create funtions.
 
 Q.6. What is the operation of this special character ‘\’?
-Ans. we use this special character with n to enter data in next line. like: \n
+Ans.  * We can use it for Escape sequences like:
+            newline character: \n
+            tab character    : \t
+            literal backslash: "\\"
+      * We can use it as line continuation. Ex:
+            total = 10 + \
+                    20 + \
+                    30
+            print(total)   ## Output: 60
+      * We use it while directing pathway of file.
 
 Q.7. Give an example of the following conditions:
 (i) Homogeneous list
 (ii) Heterogeneous set
 (iii) Homogeneous tuple
+
+Ans.  (i) Homogeneous list   : l=[1,2,3,4,5]
+      (ii) Heterogeneous set : s={'sumit', 4,6,'gupta'}
+      (iii) Homogeneous tuple: t=(3,5,3,356,16,66)
+
 Q.8. Explain the mutable and immutable data types with proper explanation & examples.:
 Ans.  * Mutable: Mutable are the data sets which can be modify or update after exicution also. like: List, string, dictionaries.
             Example: l=[1,2,3]
@@ -59,3 +73,20 @@ Q.10. Write a code to create the given structure using while loop.
    |||||
     |||
      |
+
+Ans.
+      row = 6  # Number of rows in the structure
+      num_pipes = 10  # Number of pipes in the first row
+
+      while row > 0:
+          # Print the required number of spaces before the pipes
+          spaces = 6 - row
+          print(" " * spaces, end="")
+      
+          # Print the pipes
+          pipes = "|" * num_pipes
+          print(pipes)
+      
+          # Decrement the number of pipes and move to the next row
+          num_pipes -= 2
+          row -= 1
