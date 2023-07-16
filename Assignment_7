@@ -41,11 +41,39 @@ Q.2. What is the difference between the following operators:
 (i) ‘/’ & ‘//’
 (ii) ‘**’ & ‘^’
 
-Ans.  * We use '\'  funtion for escape sequensis and '\\'  is used to call literal slash.
+Ans.  * We use ' / ' operator is the standard division operator in most programming languages. It performs regular division and 
+        returns the result as a floating-point number (decimal number) if any of the operands are floating-point numbers.  
+      * we use ' // ' operator is known as the floor division operator. It performs integer division, which means it always returns 
+        the result as an integer.
 
-      * We use '**' funtion to do square root of data and '^' symbol is also can perform like square root but '^' is not a standard 
-        exponentiation operator in most programming languages
+      * We use '**' operator in many programming languages to raise a base number to a power (exponent).
+      * We use this '^' symbol is also can perform like square root but '^' is not a standard exponentiation operator in most programming 
+        languages. In many programming languages, '^' has other meanings, such as performing bitwise XOR operations or logical XOR  
+        operations.
+
 Q.3. List the logical operators.
+
+Ans.  AND, OR, NOT
+
 Q.4. Explain right shift operator and left shift operator with examples.
+
+Ans.  *Right Shift Operator (>>):
+                  The right shift operator shifts the bits of a binary number to the right by a specified number of positions.
+                  Example:  10 (decimal)   =>  00001010 (binary)
+                            10 >> 1        =>  00000101 (binary) => 5 (decimal)
+
+      *Left Shift Operator (<<):
+                  The left shift operator shifts the bits of a binary number to the left by a specified number of positions.
+                  Example:  5 (decimal)   =>  00000101 (binary)
+                            5 << 2        =>  00010100 (binary) => 20 (decimal)
+
+
 Q.5. Create a list containing int type data of length 15. Then write a code to check if 10 is
 present in the list or not.
+
+Ans.  l=[1,2,3,4,5,6,7,8,98,10,11,23,45,66,77]
+      n=10
+      if n in l:
+        print('No# 10 is present')
+      else:
+        print(' No# 10 not found')
