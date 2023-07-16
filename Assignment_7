@@ -41,7 +41,10 @@ Q.2. What is the difference between the following operators:
 (i) ‘/’ & ‘//’
 (ii) ‘**’ & ‘^’
 
+Ans.  * We use '\'  funtion for escape sequensis and '\\'  is used to call literal slash.
 
+      * We use '**' funtion to do square root of data and '^' symbol is also can perform like square root but '^' is not a standard 
+        exponentiation operator in most programming languages
 Q.3. List the logical operators.
 Q.4. Explain right shift operator and left shift operator with examples.
 Q.5. Create a list containing int type data of length 15. Then write a code to check if 10 is
