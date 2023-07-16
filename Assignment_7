@@ -8,9 +8,40 @@ Addition: __ + __ = __
 Subtraction: __ - __ = __
 Multiplication: __ * __ = __
 Division: __ / __ = __
+
+Ans.  *Addition:
+              a=10
+              b=2
+              c=a+b
+              print(f'First variable is {a} & second variable is {b}')
+              print(f'Addition: {a} + {b} = {c}')
+
+      *Subtraction: 
+              a=10
+              b=2
+              c=a-b
+              print(f'First variable is {a} & second variable is {b}')
+              print(f'Subtraction: {a} - {b} = {c}')
+
+      *Multiplication:
+              a=10
+              b=2
+              c=a*b
+              print(f'First variable is {a} & second variable is {b}')
+              print(f'Multiplication: {a} * {b} = {c}')
+
+      *Division:
+              a=10
+              b=2
+              c=a*b
+              print(f'First variable is {a} & second variable is {b}')
+              print(f'Division: {a} / {b} = {c}')
+
 Q.2. What is the difference between the following operators:
 (i) ‘/’ & ‘//’
 (ii) ‘**’ & ‘^’
+
+
 Q.3. List the logical operators.
 Q.4. Explain right shift operator and left shift operator with examples.
 Q.5. Create a list containing int type data of length 15. Then write a code to check if 10 is
