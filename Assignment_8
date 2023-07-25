@@ -8,7 +8,11 @@ Ans.
 arguments and keyword arguments.
 
 Ans.  We have to use arguments veriable after creating the name of function.
-      * Positional argument: We use single asterisk(*) before argument veriable. By this we can use as many as data on the place of argument.
+      * Positional argument: We use single asterisk(*) before argument veriable. By this we can use unlimited data values while calling
+        function
+
+      * keyword arguments: We use Double asterisk(**) before argument veriable. By this we can use unlimited key-value pair data values 
+while calling function.
 3. What is the purpose of the return statement in a function? Can a function have multiple return
 statements? Explain with an example.
 4. What are lambda functions in Python? How are they different from regular functions? Provide an
