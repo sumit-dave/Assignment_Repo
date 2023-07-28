@@ -12,13 +12,46 @@ Ans.  We have to use arguments veriable after creating the name of function.
         function
 
       * keyword arguments: We use Double asterisk(**) before argument veriable. By this we can use unlimited key-value pair data values 
-while calling function.
-3. What is the purpose of the return statement in a function? Can a function have multiple return
-statements? Explain with an example.
-4. What are lambda functions in Python? How are they different from regular functions? Provide an
-example where a lambda function can be useful.
+        while calling function.
+3. What is the purpose of the return statement in a function? Can a function have multiple return statements? Explain with an example.
+
+Ans.   Return statement is used in a function to specify the value that function will produce after execution.
+      * A function can have multiple return statement but When the function encounters a return statement, it immediately stops executing
+        , exits the function and returns the value.
+      * Example: this max function has two return statements, but only one of them will get executed based on the condition.
+                  def max(a, b):
+                      if a > b:
+                          return a
+                      else:
+                          return b
+                  
+                  # Function call
+                  result = max(10, 7)
+
+   
+4. What are lambda functions in Python? How are they different from regular functions? Provide an example where a lambda function 
+can be useful.
+Ans.  lamda function is a compact method to create a funtion. basically it is inline function often used for short and simple conditions.
+      *Syntax: lambda arguments: expression
+      *Example: 
+               # Regular function to add two numbers
+               def add(x, y):
+                   return x + y
+               
+               # Equivalent lambda function to add two numbers
+               add_lambda = lambda x, y: x + y
+               
+               # Using both the regular function and the lambda function
+               result1 = add(5, 10)
+               result2 = add_lambda(5, 10)
+               
+               print( result1)
+               print( result2)
+
 5. How does the concept of "scope" apply to functions in Python? Explain the difference between local
 scope and global scope.
+
+Ans. 
 6. How can you use the "return" statement in a Python function to return multiple values?
 7. What is the difference between the "pass by value" and "pass by reference" concepts when it
 comes to function arguments in Python?
