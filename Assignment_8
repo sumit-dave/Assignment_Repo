@@ -51,10 +51,34 @@ Ans.  lamda function is a compact method to create a funtion. basically it is in
 5. How does the concept of "scope" apply to functions in Python? Explain the difference between local
 scope and global scope.
 
-Ans. 
+Ans.  Scope: The scope of a variable determines where it can be accessed and modified. It defines the part of the code where a variable 
+      can be referenced and used.
+            *local host: When a variable is defined inside a function, it has a local scope. It means that the variable is only 
+             accessible within that specific function and cannot be accessed from outside the function. The veriable called as local 
+             Veriable.
+
+            *Global host: Variables defined outside any function and these veriables can be accessed and modified from anywhere in the 
+             code including inside function.
 6. How can you use the "return" statement in a Python function to return multiple values?
+
+Ans.  return statement in a function to return multiple values as a tuple, a list, or any other iterable object. The return statement 
+      allows you to package and return multiple values as a single entity,
+
+      def multiple_values():
+          x = 10
+          y = 20
+          z = 30
+          return x, y, z
+          return [x,y,z]
+          return {"X is ":x, "Y is ":y, "Z is ":z}
+
+      result=mulitple_values()
+      print(result)
+
 7. What is the difference between the "pass by value" and "pass by reference" concepts when it
 comes to function arguments in Python?
+
+Ans. 
 8. Create a function that can intake integer or decimal value and do following operations:
 a. Logarithmic function (log x)
 b. Exponential function (exp(x))
