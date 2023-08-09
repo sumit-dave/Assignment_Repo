@@ -78,7 +78,14 @@ Ans.  return statement in a function to return multiple values as a tuple, a lis
 7. What is the difference between the "pass by value" and "pass by reference" concepts when it
 comes to function arguments in Python?
 
-Ans. 
+Ans. *Pass by Value:
+         In a "pass by value" system, the actual values of arguments are passed to a function. This means that any changes made to the 
+         arguments within the function do not affect the original values outside the function.
+
+     *Pass by Reference:
+         In a "pass by reference" system, a reference to the original data is passed to the function. Any changes made to the data within
+         the function are reflected outside the function as well.
+
 8. Create a function that can intake integer or decimal value and do following operations:
 a. Logarithmic function (log x)
 b. Exponential function (exp(x))
@@ -87,4 +94,39 @@ x
 )
 
 d. Square root
+
+Ans.
+import math
+
+def perform_operations(value):
+    log_result = math.log(value)
+    exp_result = math.exp(value)
+    power_result = 2 ** value
+    sqrt_result = math.sqrt(value)
+    
+    return log_result, exp_result, power_result, sqrt_result
+
+# Test the function
+input_value = float(input("Enter a value: "))
+log_result, exp_result, power_result, sqrt_result = perform_operations(input_value)
+
+print(f"Logarithmic function (log x): {log_result}")
+print(f"Exponential function (exp(x)): {exp_result}")
+print(f"Power function with base 2 (2^x): {power_result}")
+print(f"Square root: {sqrt_result}")
+
 9. Create a function that takes a full name as an argument and returns first name and last name.
+
+Ans. 
+def extract_first_last_name(full_name):
+    names = full_name.split()
+    first_name = names[0]
+    last_name = names[-1]
+    return first_name, last_name
+
+# Test the function
+input_full_name = input("Enter your full name: ")
+first_name, last_name = extract_first_last_name(input_full_name)
+print(f"First Name: {first_name}")
+print(f"Last Name: {last_name}")
+
