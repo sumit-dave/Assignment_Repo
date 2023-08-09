@@ -1,4 +1,7 @@
 1. What is a lambda function in Python, and how does it differ from a regular function?
+
+Ans.  lambda funtion is also known as a "lambda expression" or "lambda form." Lambda functions are often used for simple and concise 
+      operations where defining a regular named function would be overly verbose.
 2. Can a lambda function in Python have multiple arguments? If yes, how can you define and use
 them?
 3. How are lambda functions typically used in Python? Provide an example use case.
