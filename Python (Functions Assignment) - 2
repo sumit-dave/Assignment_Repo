@@ -134,4 +134,37 @@ Ans.
             numbers = [1, 2, 3, 4, 5]
             print(recursive_sum(numbers))
 14. Write a recursive function to determine whether a given string is a palindrome.
+
+Ans. 
+            def is_palindrome(s):
+                s = s.lower()  # Convert the string to lowercase for case-insensitive comparison
+                if len(s) <= 1:
+                    return True
+                else:
+                    return s[0] == s[-1] and is_palindrome(s[1:-1])
+            
+            # Test the function
+            input_string = input("Enter a string: ")
+            if is_palindrome(input_string):
+                print("It's a palindrome!")
+            else:
+                print("It's not a palindrome.")
+
 15. Implement a recursive function to find the greatest common divisor (GCD) of two positive integers.
+Ans.
+            def gcd(a, b):
+                if b == 0:
+                    return a
+                else:
+                    return gcd(b, a % b)
+            
+            # Test the function
+            num1 = int(input("Enter the first positive integer: "))
+            num2 = int(input("Enter the second positive integer: "))
+            
+            if num1 <= 0 or num2 <= 0:
+                print("Both numbers must be positive integers.")
+            else:
+                result = gcd(num1, num2)
+                print(f"The GCD of {num1} and {num2} is: {result}")
+
