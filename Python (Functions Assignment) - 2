@@ -2,22 +2,128 @@
 
 Ans.  lambda funtion is also known as a "lambda expression" or "lambda form." Lambda functions are often used for simple and concise 
       operations where defining a regular named function would be overly verbose.
+
 2. Can a lambda function in Python have multiple arguments? If yes, how can you define and use
 them?
+Ans.  We can use mulitple arguments in lambda function by separating the arguments with commas.
+      Ex: 
+      # Lambda function with two arguments
+      multiply = lambda x, y: x * y
+      
+      # Using the lambda function
+      result = multiply(5, 3)
+      print(result)  # Output: 15
+
+
 3. How are lambda functions typically used in Python? Provide an example use case.
-4. What are the advantages and limitations of lambda functions compared to regular functions in
-Python?
+
+Ans.  Lambda functions in Python are typically used in situations where a small, inline function is required for a short duration.
+
+      Ex:
+      people = [("Alice", 25), ("Bob", 30), ("Charlie", 22), ("David", 28)]
+
+      # Sort the list based on ages using a lambda function
+      sorted_people = sorted(people, key=lambda person: person[1])
+      
+      print(sorted_people)
+
+4. What are the advantages and limitations of lambda functions compared to regular functions in Python?
+
+Ans.  Adavantages:
+            *They are well-suited for simple operations, reducing the need for writing lengthy function definitions.
+            *Lambda functions are often used inline, as arguments to higher-order functions like map, filter, and sorted.
+            *ambda functions are anonymous and don't require a name.
+
+      Limitations:
+            *Lambda functions are limited to a single expression. This means that more complex logic cannot be encapsulated within a 
+             lambda function.
+            *Lambda functions don't support docstrings or any kind of inline documentation.
+            *Lambda functions are generally less reusable compared to regular functions.
+
 5. Are lambda functions in Python able to access variables defined outside of their own scope?
 Explain with an example.
+Ans.  lambda functions in Python can access variables that are defined outside of their own scope. This is because lambda functions are 
+      closures, which means they capture and remember the values of variables from their surrounding lexical scope.
+
+            Ex:
+            def outer_function(x):
+                y = 10
+                
+                # Define a lambda function that uses both x and y
+                lambda_function = lambda z: x + y + z
+                
+                return lambda_function
+            
+            # Create a closure using the outer_function
+            closure = outer_function(5)
+            
+            # Call the closure with an argument
+            result = closure(3)
+            print(result)  # Output: 18 (5 + 10 + 3)
+
 6. Write a lambda function to calculate the square of a given number.
+
+Ans. 
+            squared_numbers = lambda x: x**2
+            print(squared_numbers(6)) 
+
 7. Create a lambda function to find the maximum value in a list of integers.
+
+Ans. 
+            find_max = lambda x: max(x)
+            numbers = [12, 45, 6, 98, 23]
+            print(find_max(numbers))     # Output: 98
+
 8. Implement a lambda function to filter out all the even numbers from a list of integers.
+
+Ans.  
+            filter_even = lambda lst: list(filter(lambda x: x % 2 == 0, lst))
+            numbers = [12, 45, 6, 98, 23, 72, 33]
+            print(filter_even(numbers))  # Output: [12, 6, 98, 72]
+
 9. Write a lambda function to sort a list of strings in ascending order based on the length of each
 string.
+
+Ans. 
+            sort_by_length = lambda lst: sorted(lst, key=lambda x: len(x))
+            strings = ["apple", "banana", "kiwi", "grape", "orange"]
+            sorted_strings = sort_by_length(strings)
+            print(sorted_strings)  # Output: ['kiwi', 'grape', 'apple', 'banana', 'orange']
+
 10. Create a lambda function that takes two lists as input and returns a new list containing the
 common elements between the two lists.
+Ans.  
+            find_common_elements = lambda list1, list2: list(filter(lambda x: x in list2, list1))
+            list1 = [1, 2, 3, 4, 5]
+            list2 = [3, 4, 5, 6, 7]
+            common_elements = find_common_elements(list1, list2)
+            print(common_elements)  # Output: [3, 4, 5]
+
 11. Write a recursive function to calculate the factorial of a given positive integer.
+
+Ans. 
+            def factorial(n):
+                if n == 0:
+                    return 1
+                else:
+                    return n * factorial(n - 1)
+            
+            print(factorial(5))
 12. Implement a recursive function to compute the nth Fibonacci number.
+
+Ans. 
+            def fibonacci(n):
+                if n <= 0:
+                    return 0
+                elif n == 1:
+                    return 1
+                else:
+                    return fibonacci(n - 1) + fibonacci(n - 2)
+            
+            print(fibonacci(6))
+
 13. Create a recursive function to find the sum of all the elements in a given list.
+
+Ans. 
 14. Write a recursive function to determine whether a given string is a palindrome.
 15. Implement a recursive function to find the greatest common divisor (GCD) of two positive integers.
