@@ -123,7 +123,15 @@ Ans.
             print(fibonacci(6))
 
 13. Create a recursive function to find the sum of all the elements in a given list.
-
 Ans. 
+            def recursive_sum(lst):
+                if not lst:
+                    return 0
+                else:
+                    return lst[0] + recursive_sum(lst[1:])
+            
+            # Test the function
+            numbers = [1, 2, 3, 4, 5]
+            print(recursive_sum(numbers))
 14. Write a recursive function to determine whether a given string is a palindrome.
 15. Implement a recursive function to find the greatest common divisor (GCD) of two positive integers.
