@@ -71,9 +71,80 @@ d. MemoryError
 e. OverflowError
 f. TabError
 g. ValueError
+
+Ans.
+a. EOFError: Stands for "End of File Error". This error occurs when an input operation reaches the end of a file or stream but expects more data to be available.
+
+b. FloatingPointError: This error occurs when a floating-point arithmetic operation fails. It can occur, for example, when trying to perform an illegal mathematical operation involving floating-point numbers, such as division by zero in floating-point arithmetic.
+
+c. IndexError: This error occurs when trying to access an index of a sequence (like a list or a string) that is out of the valid range. In other words, you're trying to access an element at an index that doesn't exist in the sequence.
+
+d. MemoryError: This error occurs when the Python interpreter runs out of memory while trying to allocate an object. It happens when the program's memory consumption exceeds the available system memory.
+
+e. OverflowError: This error occurs when a mathematical operation results in a value that is too large (overflow) to be represented by the data type being used. For example, if you're working with integers and the result of an operation exceeds the maximum representable value.
+
+f. TabError: This error occurs when there are inconsistencies in using tabs and spaces for indentation. Python enforces consistent indentation, and mixing tabs and spaces can lead to this error.
+
+g. ValueError: This error occurs when a function receives an argument of the correct data type but with an invalid value. For example, trying to convert a string to an integer when the string is not a valid integer representation would raise a ValueError.
+
+
 8. Write code for the following given scenario and add try-exception block to it.
 a. Program to divide two numbers
+Ans. 
+            try:
+                numerator = float(input("Enter numerator: "))
+                denominator = float(input("Enter denominator: "))
+                result = numerator / denominator
+                print("Result:", result)
+            except ZeroDivisionError:
+                print("Error: Cannot divide by zero.")
+            except ValueError:
+                print("Error: Invalid input. Please enter valid numbers.")
+            except Exception as e:
+                print("An error occurred:", e)
+
 b. Program to convert a string to an integer
-c. Program to access an element in a list
+Ans. 
+            try:
+                input_string = input("Enter an integer: ")
+                integer_value = int(input_string)
+                print("Integer:", integer_value)
+            except ValueError:
+                print("Error: Invalid input. Please enter a valid integer.")
+            except Exception as e:
+                print("An error occurred:", e)
+
+c. Program to access an element in a list.
+Ans.
+            try:
+                my_list = [1, 2, 3, 4, 5]
+                index = int(input("Enter an index: "))
+                element = my_list[index]
+                print("Element at index", index, ":", element)
+            except IndexError:
+                print("Error: Index out of range.")
+            except ValueError:
+                print("Error: Invalid input. Please enter a valid index.")
+            except Exception as e:
+                print("An error occurred:", e)
+
 d. Program to handle a specific exception
+Ans.
+            try:
+                x = int(input("Enter a number: "))
+                if x < 0:
+                    raise ValueError("Negative numbers are not allowed.")
+                print("Number:", x)
+            except ValueError as ve:
+                print("ValueError:", ve)
+            except Exception as e:
+                print("An error occurred:", e)
+
 e. Program to handle any exception
+Ans.
+            try:
+                user_input = input("Enter something: ")
+                result = 10 / int(user_input)
+                print("Result:", result)
+            except Exception as e:
+                print("An error occurred:", e)
