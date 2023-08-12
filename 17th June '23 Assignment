@@ -1,4 +1,11 @@
 1. What is the role of try and exception block?
+Ans.  We use try and exception block to handle exceptions in code. Exceptions are unexpected events that can disrupt the normal flow of 
+      code execution. They can occur due to various reasons, such as invalid input, unexpected conditions, resource unavailability, and 
+      more.
+      *Try block: In try block we place the code which can raise error in it
+      *Except bloc: If an exception occurs within the "try" block, the control of the program is transferred to the"except" block, 
+       allowing you to take appropriate actions to handle the exception.
+
 2. What is the syntax for a basic try-except block?
 3. What happens if an exception occurs inside a try block and there is no matching
 except block?
