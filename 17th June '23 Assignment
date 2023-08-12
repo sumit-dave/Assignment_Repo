@@ -7,6 +7,12 @@ Ans.  We use try and exception block to handle exceptions in code. Exceptions ar
        allowing you to take appropriate actions to handle the exception.
 
 2. What is the syntax for a basic try-except block?
+
+Ans. 
+try: 
+      #Code that might raise an exception
+except:
+      #Code to handle the exception
 3. What happens if an exception occurs inside a try block and there is no matching
 except block?
 4. What is the difference between using a bare except block and specifying a specific
