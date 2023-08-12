@@ -18,10 +18,51 @@ except:
 except block?
 Ans.  We use except block. This is a catch-all block that will catch any exceptions not caught by the specific "except" blocks. It's a 
       good practice to include a generic catch-all block so that unexpected exceptions don't cause the program to crash.
-4. What is the difference between using a bare except block and specifying a specific
-exception type?
+
+4. What is the difference between using a bare except block and specifying a specific exception type?
+
+Ans.  *Specific exception type:
+            When you specify a specific exception type in an except block, you are explicitly indicating that you want to catch only that particular 
+            type of exception. This allows you to handle that specific exception only.
+      
+      *Bare (Generic) except Block:
+            Using a bare except block, without specifying a specific exception type, catches all types of exceptions. This can make it 
+            harder to diagnose and handle errors properly because you're treating all exceptions in the same way.
+
 5. Can you have nested try-except blocks in Python? If yes, then give an example.
+Ans. Yes,
+            Ex: 
+            try:
+                outer_value = int(input("Enter an outer number: "))
+                try:
+                    inner_value = int(input("Enter an inner number: "))
+                    result = outer_value / inner_value
+                    print("Result:", result)
+                except ZeroDivisionError:
+                    print("Inner Error: Cannot divide by zero.")
+                except ValueError:
+                    print("Inner Error: Invalid input. Please enter a valid number.")
+            except ValueError:
+                print("Outer Error: Invalid input. Please enter a valid number.")
+            except Exception as e:
+                print("Outer Error:", e)
+
 6. Can we use multiple exception blocks, if yes then give an example.
+Ans. Yes,
+            Ex:
+            try:
+                num = int(input("Enter a number: "))
+                result = 10 / num
+                print("Result:", result)
+            except ZeroDivisionError:
+                print("Error: Cannot divide by zero.")
+            except ValueError:
+                print("Error: Invalid input. Please enter a valid number.")
+            except ArithmeticError:
+                print("Error: Arithmetic error occurred.")
+            except Exception as e:
+                print("An error occurred:", e)
+
 7. Write the reason due to which following errors are raised:
 a. EOFError
 b. FloatingPointError
