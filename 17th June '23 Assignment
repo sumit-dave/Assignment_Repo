@@ -13,8 +13,11 @@ try:
       #Code that might raise an exception
 except:
       #Code to handle the exception
+
 3. What happens if an exception occurs inside a try block and there is no matching
 except block?
+Ans.  We use except block. This is a catch-all block that will catch any exceptions not caught by the specific "except" blocks. It's a 
+      good practice to include a generic catch-all block so that unexpected exceptions don't cause the program to crash.
 4. What is the difference between using a bare except block and specifying a specific
 exception type?
 5. Can you have nested try-except blocks in Python? If yes, then give an example.
