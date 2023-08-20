@@ -4,7 +4,7 @@ Ans.  'else' block is optional and can be used to define a block of code that sh
       the corresponding try block. The purpose of the 'else' block is to specify code that should be executed when the try block runs 
       successfully, without encountering any exceptions.
 
-      Scenario: 
+      Ex: 
       try:
           with open('data.txt', 'r') as file:
               data = file.read()
@@ -19,6 +19,21 @@ Ans.  'else' block is optional and can be used to define a block of code that sh
 
 2. Can a try-except block be nested inside another try-except block? Explain with an
 example.
+Ans.  Yes, a try-except block can be nested inside another try-except block. This is useful when you want to handle different types 
+      of exceptions at different levels of your code.
+            Ex:
+            try:
+                # Outer try block
+                num = int(input("Enter a number: "))
+                try:
+                    # Inner try block
+                    result = 10 / num
+                    print("Result:", result)
+                except ZeroDivisionError:
+                    print("Cannot divide by zero.")
+            except ValueError:
+                print("Invalid input. Please enter a valid number.")
+
 3. How can you create a custom exception class in Python? Provide an example that
 demonstrates its usage.
 4. What are some common exceptions that are built-in to Python?
