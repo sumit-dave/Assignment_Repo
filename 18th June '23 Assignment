@@ -1,5 +1,22 @@
-1. What is the role of the 'else' block in a try-except statement? Provide an example
-scenario where it would be useful.
+1. What is the role of the 'else' block in a try-except statement? Provide an example scenario where it would be useful.
+
+Ans.  'else' block is optional and can be used to define a block of code that should run only if no exception is raised within 
+      the corresponding try block. The purpose of the 'else' block is to specify code that should be executed when the try block runs 
+      successfully, without encountering any exceptions.
+
+      Scenario: 
+      try:
+          with open('data.txt', 'r') as file:
+              data = file.read()
+      except FileNotFoundError:
+          print("The file 'data.txt' does not exist.")
+      except IOError:
+          print("An error occurred while reading the file.")
+      else:
+          # Process the data from the file
+          process_data(data)
+          print("File processing completed successfully.")
+
 2. Can a try-except block be nested inside another try-except block? Explain with an
 example.
 3. How can you create a custom exception class in Python? Provide an example that
