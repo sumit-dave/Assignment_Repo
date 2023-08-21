@@ -78,18 +78,64 @@ Ans. Log levels in Python logging define the severity or importance of a log mes
 
 7. What are log formatters in Python logging, and how can you customise the log message format using formatters?
 
-Ans. 
+Ans.  Log formatters in Python logging determine how log messages are formatted before they are written to the log. You can customize 
+      the format using the logging.Formatter class.
+
+            Ex:
+            import logging
+            
+            # Create a formatter
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            
+            # Create a handler and set the formatter
+            handler = logging.StreamHandler()
+            handler.setFormatter(formatter)
+            
+            # Create a logger, attach the handler, and set the log level
+            logger = logging.getLogger('my_logger')
+            logger.addHandler(handler)
+            logger.setLevel(logging.DEBUG)
+            
+            # Log messages using the logger
+            logger.debug('This is a debug message')
+            logger.info('This is an info message')
+            logger.warning('This is a warning message')
+            logger.error('This is an error message')
+            logger.critical('This is a critical message')
 
 
-8. How can you set up logging to capture log messages from multiple modules or
-classes in a Python application?
-9. What is the difference between the logging and print statements in Python? When
-should you use logging over print statements in a real-world application?
+8. How can you set up logging to capture log messages from multiple modules or classes in a Python application?
+
+Ans.  We can set up a root logger and configure it to capture messages from multiple modules or classes. Each module or class can then
+      retrieve a logger with its name, and the log messages will be properly categorized. 
+
+9. What is the difference between the logging and print statements in Python? When should you use logging over print statements in a 
+   real-world application?
+Ans.  The print statement is used to output information to the console, typically for debugging purposes. Logging, on the other hand, 
+      is a more powerful and flexible way to capture and manage program messages, allowing you to categorize messages, control their 
+      output level, and direct them to various outputs (console, files, etc.).
+
 10. Write a Python program that logs a message to a file named "app.log" with the
 following requirements:
 ● The log message should be "Hello, World!"
 ● The log level should be set to "INFO."
 ● The log file should append new log entries without overwriting previous ones.
-11. Create a Python program that logs an error message to the console and a file named
-"errors.log" if an exception occurs during the program's execution. The error
-message should include the exception type and a timestamp.
+
+Ans.  
+            Code:
+            import logging
+            
+            logging.basicConfig(filename='app.log', level=logging.INFO)
+            logging.info("Hello, World!")
+
+11. Create a Python program that logs an error message to the console and a file named "errors.log" if an exception occurs during 
+    the program's execution. The error message should include the exception type and a timestamp.
+
+Ans.
+            Ex:
+            logging.basicConfig(filename="error.log" , level=logging.ERROR, format ='%(asctime)s  %(levelname)s  %(message)s')
+            try:
+                result = 10 / 0
+            except Exception as e:
+                logging.error(e)
+
