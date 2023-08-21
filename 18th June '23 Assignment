@@ -36,12 +36,51 @@ Ans.  Yes, a try-except block can be nested inside another try-except block. Thi
 
 3. How can you create a custom exception class in Python? Provide an example that
 demonstrates its usage.
+Ans. 
+            Ex:
+            class CustomError(Exception):
+                def __name__(self, message):
+                    self.message = message
+            
+            def process_data(data):
+                if not data:
+                    raise CustomError("Empty data provided")
+            try:
+                data = ""
+                process_data(data)
+            except CustomError as e:
+                print("Custom error occurred:", e)
+
 4. What are some common exceptions that are built-in to Python?
+Ans.  Python has several built-in exceptions, including:
+
+      * ValueError: Raised when a function receives an argument of the correct type but an inappropriate value.
+      * TypeError: Raised when an operation or function is applied to an object of inappropriate type.
+      * IndexError: Raised when a sequence subscript is out of range.
+      * KeyError: Raised when a dictionary is accessed with a key that doesn't exist.
+      * FileNotFoundError: Raised when an attempt is made to open a file that doesn't exist.
+      * ZeroDivisionError: Raised when division or modulo by zero occurs.
+
 5. What is logging in Python, and why is it important in software development?
-6. Explain the purpose of log levels in Python logging and provide examples of when
-each log level would be appropriate.
-7. What are log formatters in Python logging, and how can you customise the log
-message format using formatters?
+Ans.  Logging in Python is a method for recording messages that occur during the execution of a program. It provides a way to 
+      capture useful information, warnings, errors, and other relevant data, which can be essential for understanding program behavior,
+      and monitoring the application in production.
+
+6. Explain the purpose of log levels in Python logging and provide examples of when each log level would be appropriate.
+
+Ans. Log levels in Python logging define the severity or importance of a log message. Some common log levels include:
+
+      * DEBUG: Detailed debugging information.
+      * INFO: General information about program execution.
+      * WARNING: Indicates a potential problem or issue.
+      * ERROR: Indicates a serious error that might affect the functionality.
+      * CRITICAL: Indicates a critical error that might lead to the program's termination
+
+7. What are log formatters in Python logging, and how can you customise the log message format using formatters?
+
+Ans. 
+
+
 8. How can you set up logging to capture log messages from multiple modules or
 classes in a Python application?
 9. What is the difference between the logging and print statements in Python? When
