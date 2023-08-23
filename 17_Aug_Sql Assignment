@@ -1,0 +1,48 @@
+create database if not exists technology;
+use technology;
+create table if not exists tech_info(
+id int, 
+tech varchar(25)
+);
+
+insert into tech_info values 
+(1,"DS"),
+(1,"Tablue"),
+(1,"SQL"),
+(2,"R"),
+(2,"PowerBI"),
+(1,"Python");
+
+# Need to list out the ID of who has following skills("DS", "SQL","Python")
+
+select id from tech_info where tech in ("DS", "SQL","Python");
+
+
+
+create database product;
+use product;
+create table product_info(
+pr_id int primary key,
+product varchar(25)
+);
+
+insert into product_info values
+(1001,"Blog"),
+(1002,"Youtube"),
+(1003,"Education");
+
+create table likes(
+user_id int primary key,
+pr_id int,
+like_date date,
+foreign key(pr_id) references product_info(pr_id)
+);
+
+insert into likes values
+(1,1001,"2023-08-13"),
+(2,1003,"2023-06-23");
+
+#Return the IDs of the product info that has Zero likes.
+
+SELECT pi.pr_id FROM product_info pi LEFT JOIN likes l ON pi.pr_id = l.pr_id WHERE l.pr_id IS NULL;
+
